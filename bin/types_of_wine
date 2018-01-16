@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative './lib/types_of_wine'
+
+TypesOfWine::CLI.new.call
