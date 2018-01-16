@@ -1,5 +1,5 @@
 class TypesOfWine::CLI
   def call
-    start
+    puts "Welcome to Types of Wine is working people!"
   end
-end 
+end
