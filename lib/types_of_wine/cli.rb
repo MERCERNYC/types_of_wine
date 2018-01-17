@@ -1,76 +1,36 @@
 class TypesOfWine::CLI
   def call
     start
+    wine_list
+    goodbye
+  end
+
+  def wine_list
+    puts  "----------------------------Welcome to Types of Wine--------------------------------"
+    @wine = TypesOfWine::Wine.wine_list
+    @wine.each.with_index(1) do |wine, i|
+    puts "#{i}. #{wine.name} #{wine.taste} - #{wine.style} - #{wine.description} - #{wine.food_pairing} "
+    end
   end
 
   def start
-    puts "--------------Welcome to Types of Wine-------------------"
-    puts ""
-    puts "Pick your favorite wine to learn more about it. Enter a name or number."
-    puts ""
-    puts "1. Cabernet Sauvignon
-          2. Syrah
-          3. Zinfandel
-          4. Pinot Noir
-          5. Chardonnay
-          6. Sauvignon Blanc
-          7. Pinot Gris
-          8. Riesling"
+    input = nil
+    while input != "exit"
+    puts "Enter the number your favorite wine type (1-8) to learn more about it."
+    input = gets.strip.downcase
 
-    input = gets.strip
-    case input
-
-      when "1"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
-      when "2"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
-      when "3"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
-      when "4"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
-      when "5"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
-      when "6"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
-      when "7"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
-      when "8"
-        puts "spelling:
-              Taste:
-              Style:
-              Description:
-              Food Paring:"
+    if input.to_i < 8
+     wine = @wine[input.to_i-1]
+        puts "#{i}. #{wine.name} #{wine.taste} - #{wine.style} - #{wine.description} - #{wine.food_pairing} "
+      elsif input == "list"
+        wine_list
       else
-        exit
-        start
+        puts "Woud you like to learn more about wines, type list or exit."
+      end
     end
+  end
+
+  def goodbye
+    puts "Thanks for checking out types of wine. See you soon!"
   end
 end
