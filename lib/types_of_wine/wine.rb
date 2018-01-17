@@ -4,7 +4,7 @@ class Wine
   @@all = []
 
   def self.all
-   @@all
+   @@all << self
   end
 
   def initalize(name, taste, style, description, food_pairing)
