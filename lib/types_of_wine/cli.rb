@@ -1,15 +1,30 @@
 class TypesOfWine::CLI
   def call
-    puts "Welcome to Types of Wine!"
-    puts "Ever find yourself looking at a wine list, wanting a specific type of wine,
-    but don’t know how to ask for it? Learning how to order wine is as simple as having a good understanding of just 9 wine styles."
-    puts "_________________________"
-    puts "What types of wine would you more information on, please type number or name?"
-    puts "_________________________"
-    puts "Enter more to see the wine list again."
+    puts "--------------Welcome to Types of Wine-------------------"
+    puts ""
+    puts "1. Cabernet Sauvignon
+          2. Syrah
+          3. Zinfandel
+          4. Pinot Noir
+          5. Chardonnay
+          6. Sauvignon Blanc
+          7. Pinot Gris
+          8. Riesling"
+    puts "_________________________________________________________________________"
+    puts ""
+    puts "Pick your favorite wine to learn more about it. Enter a name or number."
+    puts "_________________________________________________________________________"
+    puts ""
+    puts "Spelling: Cab-er-nay Saw-vin-yawn
+          Taste: Black Cherry, Black Currant, Baking Spices and Cedar (from oak)
+          Style: Full-bodied Red Wine
+          Description: Cabernet Sauvignon is a full-bodied red grape first heavily planted in the
+                      Bordeaux region.Today, it’s the most popular wine variety in the world.
+                      Wines are full-bodied with bold tannins and a long persistent finish driven
+                      mostly by the higher levels of alcohol and tannin that often
+                      accompany these wines.
+          Food Pairing: lamb, beef, smoked meats, French, American, firm cheeses like aged cheddar and hard cheeses like Pecorino"
+    puts "Enter list to see the wines again."
     puts "Enter exit to end the program."
-    puts "_________________________"
   end
-
-
 end
