@@ -1,6 +1,12 @@
 class TypesOfWine::CLI
   def call
+    start
+  end
+
+  def start
     puts "--------------Welcome to Types of Wine-------------------"
+    puts ""
+    puts "Pick your favorite wine to learn more about it. Enter a name or number."
     puts ""
     puts "1. Cabernet Sauvignon
           2. Syrah
@@ -10,21 +16,61 @@ class TypesOfWine::CLI
           6. Sauvignon Blanc
           7. Pinot Gris
           8. Riesling"
-    puts "_________________________________________________________________________"
-    puts ""
-    puts "Pick your favorite wine to learn more about it. Enter a name or number."
-    puts "_________________________________________________________________________"
-    puts ""
-    puts "Spelling: Cab-er-nay Saw-vin-yawn
-          Taste: Black Cherry, Black Currant, Baking Spices and Cedar (from oak)
-          Style: Full-bodied Red Wine
-          Description: Cabernet Sauvignon is a full-bodied red grape first heavily planted in the
-                      Bordeaux region.Today, it’s the most popular wine variety in the world.
-                      Wines are full-bodied with bold tannins and a long persistent finish driven
-                      mostly by the higher levels of alcohol and tannin that often
-                      accompany these wines.
-          Food Pairing: lamb, beef, smoked meats, French, American, firm cheeses like aged cheddar and hard cheeses like Pecorino"
-    puts "Enter list to see the wines again."
-    puts "Enter exit to end the program."
+
+    input = gets.strip
+    case input
+
+      when "1"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      when "2"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      when "3"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      when "4"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      when "5"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      when "6"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      when "7"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      when "8"
+        puts "spelling:
+              Taste:
+              Style:
+              Description:
+              Food Paring:"
+      else
+        exit
+        start
+    end
   end
 end
