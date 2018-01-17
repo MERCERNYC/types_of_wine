@@ -3,15 +3,16 @@ class Wine
 
   @@all = []
 
+  def self.all
+   @@all
+  end
+
   def initalize(name, taste, style, description, food_pairing)
     @name = name
     @taste = taste
     @style = style
     @description = description
     @food_pairing = food_pairing
-  end
-
-  def
   end
 
 
