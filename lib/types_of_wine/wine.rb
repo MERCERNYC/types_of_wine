@@ -15,16 +15,17 @@ class TypesOfWine::Wine
     @food_pairing = food_pairing
   end
 
-  def self.scrape_wine
-    doc = Nokogiri::HTML(open("http://winefolly.com/review/common-types-of-wine/")).text
+  def self.wine_scraper
+    doc = Nokogiri::HTML(open("http://winefolly.com/review/common-types-of-wine/"))
 
     wine = self.new
 
     wine.name = doc.search("div.span5 h3").text.strip
-    wine.taste = doc.search("div.span5.icon-caret-right").text.strip
-    wine.style = doc.search(".span5.icon-caret-right i strong").text.strip
-    wine.description = doc.search(".span5 strong").text.strip
-    wine.food_pairing = doc.search(".span5 strong").text.strip
+    wine.spelling = doc.search("div.span5 p").children[0].text.strip
+    wine.taste = doc.search("div.span5 p").children[2].text.strip
+    wine.style = doc.search("div.span5 p").children[6].text.strip
+    wine.description = doc.search("div.span5 p").children[10].text.strip
+    wine.food_pairing = doc.search("div.span5 p").children[16].text
     binding.pry
     wine #return wine_scraper
   end
