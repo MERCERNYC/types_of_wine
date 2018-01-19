@@ -15,5 +15,4 @@ class Wine
     @food_pairing = food_pairing
   end
 
-
 end
