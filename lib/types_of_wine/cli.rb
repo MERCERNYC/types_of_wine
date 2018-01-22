@@ -23,7 +23,7 @@ class TypesOfWine::CLI
        wine = @wine[input.to_i-1]
        puts "------------- #{wine.name.upcase} -------------"#{get a gem to color these input to make more fun}
        puts ""
-       puts "------------- #{wine.description} -------------"#needs to be indented /t for tab
+       puts "{wine.\t description}"#needs to be indented /t for tab
        puts ""
        puts "-----------------------------------------------"
        puts "Spelling: #{wine.spelling}"

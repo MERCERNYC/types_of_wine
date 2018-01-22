@@ -3,23 +3,25 @@ class TypesOfWine::Wine
 
   @@all = []
 
-  def initalize(name=nil, taste=nil, style=nil, description=nil, food_pairing=nil)
+  def initalize(name=nil, taste=nil, style=nil, description=nil, food_pairing=nil)#provide default value with nil
     @name = name
     @taste = taste
     @style = style
     @description = description
     @food_pairing = food_pairing
+    @@all << self
   end
 
   def self.all
-    @@all << self
+    @@all
   end
 
   def self.wine_scraper
     doc = Nokogiri::HTML(open("http://winefolly.com/review/common-types-of-wine/"))
+    doc.search("div.span5 h3").each do |wines|
 
     wine = self.new
-    wine.name = doc.search("div.span5 h3").text.strip
+    
     wine.spelling = doc.search("div.span5 p").children[0].text.strip #Select the first <1> element inside
     wine.taste = doc.search("div.span5 p").children[2].text.strip
     wine.style = doc.search("div.span5 p").children[6].text.strip
