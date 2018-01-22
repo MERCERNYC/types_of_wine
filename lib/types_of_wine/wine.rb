@@ -9,6 +9,9 @@ class TypesOfWine::Wine
     @style = style
     @description = description
     @food_pairing = food_pairing
+  end
+
+  def self.all
     @@all << self
   end
 

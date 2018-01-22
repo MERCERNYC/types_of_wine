@@ -1,4 +1,5 @@
 class TypesOfWine::CLI
+
   def call
     menu
     wine_list
@@ -20,15 +21,16 @@ class TypesOfWine::CLI
 
       if input.to_i > 0
        wine = @wine[input.to_i-1]
-       puts "-------------- #{wine.name.upcase} --------------"#{get a gem to color these input to make more fun}
+       puts "------------- #{wine.name.upcase} -------------"#{get a gem to color these input to make more fun}
        puts ""
+       puts "------------- #{wine.description} -------------"#needs to be indented /t for tab
+       puts ""
+       puts "-----------------------------------------------"
        puts "Spelling: #{wine.spelling}"
        puts "Taste: #{wine.taste}"
        puts "Style: #{wine.style}"
-       puts "Description: #{wine.description}"#needs to be indented /t for tab
        puts "Food_pairing: #{wine.food_pairing}"
-       puts ""
-       puts "------------------------------------------------ "
+       puts "-----------------------------------------------"
 
       elsif input == "list"
        wine_list
@@ -41,4 +43,5 @@ class TypesOfWine::CLI
   def goodbye
     puts "Thanks for checking out types of wine. See you soon!"
   end
+
 end
