@@ -1,28 +1,35 @@
 class TypesOfWine::CLI
   def call
-    start
+    menu
     wine_list
   end
 
   def wine_list
-    puts  "----------------------------Welcome to Types of Wine--------------------------------"
-    @wine = TypesOfWine::Wine.wine_list#class Wine with a #wine_list method(build)
+    puts  "----------------Welcome to Types of Wine----------------"
+    @wine = TypesOfWine::Wine.wine_scraper#the wine_list method depends on class method wine_list scraper in order to return instances of wine
     @wine.each.with_index(1) do |wine, i|
-    puts "#{i}. #{wine.name}"
+    puts "#{i}. #{wine.name}" #add color
     end
   end
 
-  def start
+  def menu
     input = nil
     while input != "exit"
-      puts "Enter the number (1-8) your favorite wine to learn more abou it."
-      puts "Enter list to see the wine list again."
-      puts "Enter exit to end the program."
+      puts "Enter the number (1-8) of your favorite wine to learn more about or exit to stop."
       input = gets.strip
 
       if input.to_i > 0
        wine = @wine[input.to_i-1]
-       TypesOfWine::Wine.wine_description#create a method with wine_description
+       puts "-------------- #{wine.name.upcase} --------------"#{get a gem to color these input to make more fun}
+       puts ""
+       puts "Spelling: #{wine.spelling}"
+       puts "Taste: #{wine.taste}"
+       puts "Style: #{wine.style}"
+       puts "Description: #{wine.description}"#needs to be indented /t for tab
+       puts "Food_pairing: #{wine.food_pairing}"
+       puts ""
+       puts "------------------------------------------------ "
+
       elsif input == "list"
        wine_list
       elsif input == "exit"
