@@ -1,10 +1,12 @@
 class TypesOfWine::Wine
-  attr_accessor :name, :taste, :style, :description, :food_pairing
+  attr_accessor :name, :spelling, :taste, :style, :description, :food_pairing
 
   @@all = []
+ # every time an instance of the class is initialized we should push it into the @@all class variable
 
-  def initalize(name=nil, taste=nil, style=nil, description=nil, food_pairing=nil)#provide default value with nil
+  def initialize(name = nil, spelling = nil, taste = nil, style = nil, description = nil, food_pairing = nil)
     @name = name
+    @spelling = spelling
     @taste = taste
     @style = style
     @description = description
@@ -16,20 +18,8 @@ class TypesOfWine::Wine
     @@all
   end
 
-  def self.wine_scraper
-    doc = Nokogiri::HTML(open("http://winefolly.com/review/common-types-of-wine/"))
-    doc.search("div.span5 h3").each do |wines|
-
-    wine = self.new
-
-    wine.spelling = doc.search("div.span5 p").children[0].text.strip #Select the first <1> element inside
-    wine.taste = doc.search("div.span5 p").children[2].text.strip
-    wine.style = doc.search("div.span5 p").children[6].text.strip
-    wine.description = doc.search("div.span5 p").children[10].text.strip
-    wine.food_pairing = doc.search("div.span5 p").children[16].text
-    wine #return wine_scraper
-    end
-  end
-
+  # def self.find_by_name(name)
+  #   self.all.detect{|w| w.name == name}
+  # end
 
 end
