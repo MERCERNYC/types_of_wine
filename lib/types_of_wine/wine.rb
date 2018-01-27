@@ -1,11 +1,6 @@
 class TypesOfWine::Wine
   attr_accessor :name, :spelling, :taste, :style, :description, :food_pairing
 
-  def self.wine_list
-    self.scrape_wines
-  end
-
-
    def self.scrape_wines
     wines = []
     doc = Nokogiri::HTML(open("http://winefolly.com/review/common-types-of-wine/"))
