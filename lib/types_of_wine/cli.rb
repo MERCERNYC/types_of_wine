@@ -9,7 +9,7 @@ class TypesOfWine::CLI
 
   def greeting
    puts ""
-   puts "**************** Welcome to Types of Wine ****************"
+   puts "****************** Welcome to Types of Wine ******************"
    puts ""
   end
 
@@ -30,15 +30,18 @@ class TypesOfWine::CLI
       if input.to_i > 0
         wine = @wines[input.to_i-1]
 
-        puts "-------------------------------- #{wine.name.upcase} --------------------------------"
-        puts "Spelling: #{wine.spelling}"
-        puts "Description: #{wine.description}"#needs to be indented /t for tab
-        puts "Taste: #{wine.taste}"
-        puts "Style: #{wine.style}"
-        puts "Food_pairing: #{wine.food_pairing}"
-        puts "----------------------------------------------------------------------------------------"
         puts ""
-        puts "Would you like to learn more about other wines? Enter [y] to see list or exit to quit."
+        puts "#{wine.name.upcase}".colorize(:magenta)
+        puts ""
+        puts "Spelling: ".colorize(:magenta) + " #{wine.spelling}"
+        puts "Description: ".colorize(:magenta) + " #{wine.description}"#needs to be indented /t for tab
+        puts "Taste: ".colorize(:magenta) + " #{wine.taste}"
+        puts "Style: ".colorize(:magenta) + " #{wine.style}"
+        puts "Food_pairing: ".colorize(:magenta) + " #{wine.food_pairing}"
+        puts ""
+        puts "----------------------------------------------*---------------------------------------"
+        puts ""
+        puts "Would you like to learn more about other types of grape? Enter [y] to see list or exit to quit."
 
         input = gets.strip.downcase
         if input == "yes" || input == "y"
@@ -52,7 +55,7 @@ class TypesOfWine::CLI
   end
 
   def goodbye
-    puts "You are a true wine expert!"
+    puts "You are a true wine expert. I see you soon!"
   end
 
 end

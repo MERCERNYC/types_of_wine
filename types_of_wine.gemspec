@@ -9,10 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Juliana Fogg'"]
   spec.email         = ["'julianafogg@gmail.com'"]
 
-   spec.summary       = "TypesOfWine that need to be updated once is done"
-  # spec.description   = {TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Scraper to reference to the most popular wine varieties(type of grape) and how to pair wine with food.}
+  spec.description   = %q{Lists information of 8 types of wine including spelling, description, taste, style and food pairing.}
   spec.homepage      = "https://github.com/MERCERNYC/types_of_wine"
-  spec.license       = "MIT"
+  spec.license       = "MIT"  
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -33,7 +33,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "pry"
-  
+
   spec.add_dependency "nokogiri"
+  spec.add_dependency 'colorize', '~> 0.8.1'
 
 end
