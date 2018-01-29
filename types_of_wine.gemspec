@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["'julianafogg@gmail.com'"]
 
   spec.summary       = %q{Scraper to reference to the most popular wine varieties(type of grape) and how to pair wine with food.}
-  spec.description   = %q{Lists information of 8 types of wine including spelling, description, taste, style and food pairing.}
+  spec.description   = %q{Types of Wine gem lists information of 8 types of wine including spelling, description, taste, style and food pairing.}
   spec.homepage      = "https://github.com/MERCERNYC/types_of_wine"
-  spec.license       = "MIT"  
+  spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

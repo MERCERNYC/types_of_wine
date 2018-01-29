@@ -1,8 +1,8 @@
-# TypesOfWine
+#TypesOfWine
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/types_of_wine`. To experiment with that code, run `bin/console` for an interactive prompt.
+Types of Wine scraper lists information of 8 types of wine varieties including spelling, description, taste, style and food pairing. Have fun with your new gem!
 
-TODO: Delete this and the text above, and describe your gem
+In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/types_of_wine`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+./bin/types_of_wine #run the CLI
 
 ## Development
 
