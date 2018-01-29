@@ -23,14 +23,13 @@ class TypesOfWine::CLI
   def menu
     input = nil
     while input != "exit"
-      puts""
       puts "Enter the number of your favorite wine to learn more about it."
       input = gets.strip.downcase
 
       if input.to_i > 0
         wine = @wines[input.to_i-1]
 
-        puts ""
+        puts "----------------------------------------------*-----------------------------------------------"
         puts "#{wine.name.upcase}".colorize(:magenta)
         puts ""
         puts "Spelling: ".colorize(:magenta) + " #{wine.spelling}"
@@ -39,9 +38,9 @@ class TypesOfWine::CLI
         puts "Style: ".colorize(:magenta) + " #{wine.style}"
         puts "Food_pairing: ".colorize(:magenta) + " #{wine.food_pairing}"
         puts ""
-        puts "----------------------------------------------*---------------------------------------"
+        puts "----------------------------------------------*-----------------------------------------------"
         puts ""
-        puts "Would you like to learn more about other types of grape? Enter [y] to see list or exit to quit."
+        puts "Would you like to learn more about other types of wine? Enter [y] to see menu or exit to quit."
 
         input = gets.strip.downcase
         if input == "yes" || input == "y"
@@ -50,12 +49,12 @@ class TypesOfWine::CLI
          goodbye
          exit
         end
-      end
+      end 
     end
   end
 
   def goodbye
-    puts "You are a true wine expert. I see you soon!"
+    puts "Cheers! I see you soon."
   end
 
 end
