@@ -14,7 +14,6 @@ class TypesOfWine::Wine
       new_wine.description = wine.css("p").children[10].text.strip
       new_wine.food_pairing = wine.css("p").children[16] ? wine.css("p").children[16] : wine.css("p").children[14].text
       wines << new_wine
-      binding.pry
     end
       wines
   end
