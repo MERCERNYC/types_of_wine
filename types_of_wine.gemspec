@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Juliana Fogg'"]
   spec.email         = ["'julianafogg@gmail.com'"]
 
-  spec.summary       = %q{Scraper to reference to the most popular wine varieties(type of grape) and how to pair wine with food.}
+  spec.summary       = %q{Scraper for the most popular wine varieties(type of grape) and how to pair wine with food.}
   spec.description   = %q{Types of Wine gem lists information of 8 types of wine including spelling, description, taste, style and food pairing.}
   spec.homepage      = "https://github.com/MERCERNYC/types_of_wine"
   spec.license       = "MIT"
