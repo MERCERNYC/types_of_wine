@@ -8,8 +8,9 @@ class TypesOfWine::CLI
   end
 
   def greeting
+   puts "********************************** Welcome to Types of Wine **********************************"
    puts ""
-   puts "****************** Welcome to Types of Wine ******************"
+   puts "There are many different kinds of wine grapes–over a thousand, but here are the top varieties."
    puts ""
   end
 
@@ -23,6 +24,7 @@ class TypesOfWine::CLI
   def menu
     input = nil
     while input != "exit"
+      puts ""
       puts "Enter the number of your favorite wine to learn more about it."
       input = gets.strip.downcase
 
@@ -32,11 +34,11 @@ class TypesOfWine::CLI
         puts "----------------------------------------------*-----------------------------------------------"
         puts "#{wine.name.upcase}".colorize(:magenta)
         puts ""
-        puts "Spelling: ".colorize(:magenta) + " #{wine.spelling}"
-        puts "Description: ".colorize(:magenta) + " #{wine.description}"#needs to be indented /t for tab
-        puts "Taste: ".colorize(:magenta) + " #{wine.taste}"
-        puts "Style: ".colorize(:magenta) + " #{wine.style}"
-        puts "Food_pairing: ".colorize(:magenta) + " #{wine.food_pairing}"
+        puts "Spelling: ".colorize(:magenta) + "#{wine.spelling}"
+        puts "Description: ".colorize(:magenta) + "#{wine.description}"#needs to be indented /t for tab
+        puts "Taste: ".colorize(:magenta) + "#{wine.taste}"
+        puts "Style: ".colorize(:magenta) + "#{wine.style}"
+        puts "Food_pairing: ".colorize(:magenta) + "#{wine.food_pairing}"
         puts ""
         puts "----------------------------------------------*-----------------------------------------------"
         puts ""
@@ -49,7 +51,7 @@ class TypesOfWine::CLI
          goodbye
          exit
         end
-      end 
+      end
     end
   end
 
