@@ -39,6 +39,7 @@ class TypesOfWine::CLI
         puts "Taste: ".colorize(:magenta) + "#{wine.taste}"
         puts "Style: ".colorize(:magenta) + "#{wine.style}"
         puts "Food_pairing: ".colorize(:magenta) + "#{wine.food_pairing}"
+        puts "Alternative: ".colorize(:magenta) + "#{wine.alternative}"
         puts ""
         puts "----------------------------------------------*-----------------------------------------------"
         puts ""
@@ -46,7 +47,7 @@ class TypesOfWine::CLI
 
         input = gets.strip.downcase
         if input == "yes" || input == "y"
-         list_wines
+        list_wines
         else
          goodbye
          exit
@@ -56,7 +57,7 @@ class TypesOfWine::CLI
   end
 
   def goodbye
-    puts "Cheers! I see you soon."
+    puts "Cheers to wine! I see you soon."
   end
 
 end

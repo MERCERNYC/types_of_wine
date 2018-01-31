@@ -1,5 +1,5 @@
 class TypesOfWine::Wine
-  attr_accessor :name, :spelling, :taste, :style, :description, :food_pairing
+  attr_accessor :name, :spelling, :taste, :style, :description, :food_pairing, :alternative
 
    def self.scrape_wines
     wines = []
@@ -11,7 +11,8 @@ class TypesOfWine::Wine
       new_wine.spelling = wine.css("p").children[0].text.strip
       new_wine.taste = wine.css("p").children[2].text.strip
       new_wine.style = wine.css("p").children[6].text.strip
-      new_wine.description = wine.css("p").children[10].text.strip
+      new_wine.alternative = wine.css("li").children[0..1].text.strip
+      new_wine.description = wine.css('p').children[10..12].text.strip
       new_wine.food_pairing = wine.css("p").children[16] ? wine.css("p").children[16] : wine.css("p").children[14].text
       wines << new_wine
     end
