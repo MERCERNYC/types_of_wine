@@ -14,10 +14,10 @@ class TypesOfWine::CLI
    puts ""
   end
 
-  def list_wines #the wine_list method depends on class method scrape_wines scraper in order to return instances of wine
-    @wines = TypesOfWine::Wine.scrape_wines #instance variable to call out of the scope
+  def list_wines
+    @wines = TypesOfWine::Wine.scrape_wines
     @wines.each_with_index do |wine, i|
-    puts "#{i+1}. #{wine.name}" #add color
+    puts "#{i+1}. #{wine.name}"
     end
   end
 
@@ -35,7 +35,7 @@ class TypesOfWine::CLI
         puts "#{wine.name.upcase}".colorize(:magenta)
         puts ""
         puts "Spelling: ".colorize(:magenta) + "#{wine.spelling}"
-        puts "Description: ".colorize(:magenta) + "#{wine.description}"#needs to be indented /t for tab
+        puts "Description: ".colorize(:magenta) + "#{wine.description}"
         puts "Taste: ".colorize(:magenta) + "#{wine.taste}"
         puts "Style: ".colorize(:magenta) + "#{wine.style}"
         puts "Food_pairing: ".colorize(:magenta) + "#{wine.food_pairing}"
