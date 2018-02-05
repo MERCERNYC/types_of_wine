@@ -2,11 +2,12 @@
 
 Specs:
 - [x] Have a CLI for interfacing with the application
-  Achieved the CLI for the user to interact by providing access to data from scraped webpage with
-  instance variables and taking the input commands of user using while/if statements and string interpolation to print data.
+  Prompted the user for input
+  Defined the input interface
+  Executed user input by accessing to data from class method
 
 - [x] Pull data from an external source
-  Pulled data from external source by scraping Wine Folly website using Nokogiri gem (to parse HTML) and Open-URI (to make HTTP requests).
+  Pulled data from external source by scraping website using Nokogiri gem (to parse HTML) and Open-URI (to make HTTP requests)
 
 - [x] Implement both list and detail views
-  Implemented print list and details views with method that depends on class method in order to return instances of object to print list and detail views.
+  Implemented list and details of list by string interpolation and scraping to print data
