@@ -3,7 +3,7 @@ PATH
   specs:
     types_of_wine (0.1.0)
       colorize (~> 0.8.1)
-      nokogiri
+      nokogiri (~> 1.6, >= 1.6.8)
 
 GEM
   remote: https://rubygems.org/
@@ -24,7 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  pry
+  pry (~> 0)
   rake (~> 10.0)
   types_of_wine!
 

@@ -28,7 +28,7 @@ class TypesOfWine::CLI
       puts "Enter the number of your favorite wine to learn more about it."
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      if input.to_i > 0 && input.to_i < @wines.size
         wine = @wines[input.to_i-1]
 
         puts "----------------------------------------------*-----------------------------------------------"
