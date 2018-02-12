@@ -24,9 +24,6 @@ Or install it yourself as:
 
 ./bin/types_of_wine #run the CLI
 
-![Alt Text](https://giphy.com/embed/xT1Ra21TUhIcgGlCyQ" width="480" height="274" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cli-cliproject-xT1Ra21TUhIcgGlCyQ">via GIPHY)
-
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
