@@ -24,7 +24,6 @@ Or install it yourself as:
 
 ./bin/types_of_wine #run the CLI
 
-<a href="https://imgflip.com/gif/24fi1p"><img src="https://i.imgflip.com/24fi1p.gif" title="made at imgflip.com"/></a>
 
 ## Development
 
