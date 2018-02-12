@@ -24,7 +24,6 @@ Or install it yourself as:
 
 ./bin/types_of_wine #run the CLI
 
-https://giphy.com/gifs/xT1Ra21TUhIcgGlCyQ/html5
 
 ## Development
 
